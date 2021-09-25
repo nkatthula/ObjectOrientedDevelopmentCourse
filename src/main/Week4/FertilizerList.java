@@ -10,25 +10,25 @@ public class FertilizerList implements Lists {
 		specificationList = new ArrayList<SpecificationList>();
 
 
-		addItem("K&B's Pancake Breakfast", 
-			"Pancakes with scrambled eggs and toast", 
+		addItem("Phosphoris",
+			"Fertilizers contains high amounts of phosphorus",
 			true,
-			2.99);
+			200.99);
  
-		addItem("Regular Pancake Breakfast", 
-			"Pancakes with fried eggs, sausage", 
+		addItem("Nitrogen",
+			"Fertilizers contains high amounts of Nitrogen",
 			false,
-			2.99);
+			276.99);
  
-		addItem("Blueberry Pancakes",
-			"Pancakes made with fresh blueberries",
+		addItem("Potassium",
+			"Fertilizers contains high amounts of Potassium",
 			true,
-			3.49);
+			389.49);
  
-		addItem("Waffles",
-			"Waffles with your choice of blueberries or strawberries",
+		addItem("Other",
+			"Fertilizers contains high amounts of Other minerals",
 			true,
-			3.59);
+			354.59);
 	}
 
 

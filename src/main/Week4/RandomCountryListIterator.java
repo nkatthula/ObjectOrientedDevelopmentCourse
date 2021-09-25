@@ -23,6 +23,6 @@ public class RandomCountryListIterator implements Iterator {
 		}
 	}
 	public String toString() {
-		return "Alternating Diner Menu Iterator";
+		return "Alternating Country List Iterator";
 	}
 }
