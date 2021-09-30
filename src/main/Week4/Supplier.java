@@ -10,45 +10,21 @@ public class Supplier {
 	}
  
 	public void printMenu() {
-		Iterator fertilizerList = fertilizerList.createIterator();
-		Iterator countryList = countryList.createIterator();
+		Iterator fertilizerIterator = fertilizerList.createIterator();
+		Iterator countryIterator = countryList.createIterator();
 
-		System.out.println("MENU\n----\nBREAKFAST");
-		printMenu(fertilizerList);
-		System.out.println("\nLUNCH");
-		printMenu(countryList);
-
+		System.out.println("List\n----\nChemicals");
+		printMenu(fertilizerIterator);
+		System.out.println("\nFertilizers");
+		printMenu(countryIterator);
 	}
  
-	private void printMenu(Iterator iterator) {
+	public void printMenu(Iterator iterator) {
 		while (iterator.hasNext()) {
-			SpecificationList menuItem = iterator.next();
-			System.out.print(menuItem.getName() + ", ");
-			System.out.print(menuItem.getPrice() + " -- ");
-			System.out.println(menuItem.getDescription());
+			SpecificationList specificationLists = iterator.next();
+			System.out.print(specificationLists.getName() + ", ");
+			System.out.print(specificationLists.getPrice() + " -- ");
+			System.out.println(specificationLists.getDescription());
 		}
-	}
-
-	private void printToxicMenu(Iterator iterator) {
-		while (iterator.hasNext()) {
-			SpecificationList specificationList = iterator.next();
-			if (specificationList.isToxic()) {
-				System.out.print(specificationList.getName());
-				System.out.println("\t\t" + specificationList.getPrice());
-				System.out.println("\t" + specificationList.getDescription());
-			}
-		}
-	}
-
-	private boolean isToxic(String name, Iterator iterator) {
-		while (iterator.hasNext()) {
-			SpecificationList specificationList = iterator.next();
-			if (specificationList.getName().equals(name)) {
-				if (specificationList.isToxic()) {
-					return true;
-				}
-			}
-		}
-		return false;
 	}
 }

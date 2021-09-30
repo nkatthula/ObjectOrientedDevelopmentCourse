@@ -1,51 +1,43 @@
 package main.Week4;
 
 public class CountryList implements Lists {
-	static final int MAX_ITEMS = 6;
+	static final int MAX_ITEMS = 5;
 	int numberOfItems = 0;
-	SpecificationList[] specificationLists;
+	SpecificationList[] specificationList;
   
 	public CountryList() {
-		specificationLists = new SpecificationList[MAX_ITEMS];
+		specificationList = new SpecificationList[MAX_ITEMS];
  
-		addItem("Vegetarian BLT",
-			"(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99);
-		addItem("BLT",
-			"Bacon with lettuce & tomato on whole wheat", false, 2.99);
-		addItem("Soup of the day",
-			"Soup of the day, with a side of potato salad", false, 3.29);
-		addItem("Hotdog",
-			"A hot dog, with sauerkraut, relish, onions, topped with cheese",
-			false, 3.05);
-		addItem("Steamed Veggies and Brown Rice",
-			"Steamed vegetables over brown rice", true, 3.99);
-		addItem("Pasta",
-			"Spaghetti with Marinara Sauce, and a slice of sourdough bread",
-			true, 3.89);
+		addItem("STRAIGHT NITROGENOUS FERTILIZERS",
+			"Mostly made of Urea", false, 49.99);
+		addItem("STRAIGHT PHOSPHATIC FERTILIZERS",
+			"Contains Superphosphate and Bone meal", false, 114.99);
+		addItem("STRAIGHT POTASSIC FERTILIZERS",
+			"These conatins high concentrate of Potassium", false, 149.99);
+		addItem("STRAIGHT SULPHUR FERTILIZERS",
+			"These conatins high concentrate of Sulphur", true, 88.97);
+		addItem("MICRONUTRIENTS",
+			"Mix of chemicals", true, 77.99);
 	}
 
 	public void addItem(String name, String description,
-						boolean vegetarian, double price)
+						boolean toxic, double price)
 	{
-		SpecificationList specificationList = new SpecificationList(name, description, vegetarian, price);
+		SpecificationList specificationLists = new SpecificationList(name, description, toxic, price);
 		if (numberOfItems >= MAX_ITEMS) {
 			System.err.println("Sorry, menu is full!  Can't add item to menu");
 		} else {
-			specificationLists[numberOfItems] = specificationList;
+			specificationList[numberOfItems] = specificationLists;
 			numberOfItems = numberOfItems + 1;
 		}
 	}
 
-	public SpecificationList[] getMenuItems() {
-		return specificationLists;
+	public SpecificationList[] getSpecificationList() {
+		return specificationList;
 	}
 
 	public CountryListIterator createIterator() {
-		return new CountryListIterator(specificationLists);
-		// To test Alternating menu items, comment out above line,
-		// and uncomment the line below.
-		//return new AlternatingDinerMenuIterator(menuItems);
-	}
+		return new CountryListIterator(specificationList);
 
-	// other menu methods here
+	}
 }

@@ -10,7 +10,7 @@ public class FertilizerList implements Lists {
 		specificationList = new ArrayList<SpecificationList>();
 
 
-		addItem("Phosphoris",
+		addItem("Phosphorus",
 			"Fertilizers contains high amounts of phosphorus",
 			true,
 			200.99);
@@ -32,24 +32,21 @@ public class FertilizerList implements Lists {
 	}
 
 
-	public void addItem(String name, String description,
-						boolean vegetarian, double price)
+	public void addItem(String name, String description, boolean toxic, double price)
 	{
-		SpecificationList specificationList = new SpecificationList(name, description, toxic, price);
-		specificationList.add(specificationList);
+		SpecificationList specificationLists = new SpecificationList(name, description, toxic, price);
+		specificationList.add(specificationLists);
 	}
 
-	public List<SpecificationList> getMenuItems() {
+	public List<SpecificationList> getSpecificationList() {
 		return specificationList;
 	}
 
-	public CountryListIterator createIterator() {
-		return new CountryListIterator(specificationList);
+	public Iterator createIterator() {
+		return new FertilizerListIterator(specificationList);
 	}
 
 	public String toString() {
 		return "Objectville Pancake House Menu";
 	}
-
-	// other menu methods here
 }

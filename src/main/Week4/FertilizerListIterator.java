@@ -3,32 +3,21 @@ package main.Week4;
 import java.util.List;
 
 public class FertilizerListIterator implements Iterator {
-	List<SpecificationList> items;
+	List<SpecificationList> specs;
 	int position = 0;
  
-	public FertilizerListIterator(List<SpecificationList> items) {
-		this.items = items;
+	public FertilizerListIterator(List<SpecificationList> specs) {
+		this.specs = specs;
 	}
  
 	public SpecificationList next() {
-		/* 
-		MenuItem item = items.get(position);
+
+		SpecificationList item = specs.get(position);
 		position = position + 1;
 		return item;
-		*/
-		// or shorten to:
-		return items.get(position++);
 	}
  
 	public boolean hasNext() {
-		/*
-		if (position >= items.size()) {
-			return false;
-		} else {
-			return true;
-		}
-		*/
-		// or shorten to:
-		return items.size() > position;
+		return specs.size() > position;
 	}
 }
