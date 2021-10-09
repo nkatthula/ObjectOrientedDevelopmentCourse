@@ -1,12 +1,11 @@
 package main.Week6;
 
-public class InteriorWall extends Wall {
+public class SubFertilizer extends Phosphorus {
 	String name;
-	String material;
-	
-	public InteriorWall(String material) {
+
+	public SubFertilizer(String material) {
 		super(material);
-		this.name = "Interior wall made out of " + material;
+		this.name = "Mix of Fertilizer made of " + material;
 	}
 	public void setName(String name) {
 		this.name = name;
