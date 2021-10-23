@@ -1,0 +1,5 @@
+Info:
+
+The UnitTests folder has a MaiTest class where we can add more no. of classes in future.
+I have added only two tests but not for all of them as you've asked.
+The unit tests are 100% successful.

@@ -1,0 +1,8 @@
+The Fertilizer Management System is an important subject related to farmers and I can relate as I come from a farming family.
+The Builder pattern design I have used in this project which has a parent class and many subclasses.
+The Subclasses include GreenFarmers, CommercialFarmers and PastoralFarmers and the information about a particular farming
+The Factory pattern is used in the project is used for maintaining the stock of Fertilizers, so that the inventory should be available on time. I used the
+The Observer pattern is used for calculating the price of the total purchase.
+The State pattern is used for availability of the Fertilizers in Management system portal.
+The Unit tests have been added in order to verify the basic functionality but not entirely for the whole project as you've asked for.
+In the main class which is FertilizerManagementSystem, the user inputs and erases data through console and process them.
