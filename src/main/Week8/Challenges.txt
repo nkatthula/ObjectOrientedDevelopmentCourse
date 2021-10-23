@@ -1,0 +1,5 @@
+
+Challenges and difficulties I faced for Fertilizer Management System project is using builder pattern to set
+the values for the Fertilizer and Farmer details, so that I need not to set the values for unwanted variable.
+Implementing the factory design to create an instance for the entering data. Another challenge is to add Junit tests as this is my first time to work on it.
+Apart from these it was a fun ride working on this project.
